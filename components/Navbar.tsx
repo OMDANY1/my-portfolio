@@ -1,0 +1,2 @@
+import Link from 'next/link'
+export default function Navbar(){return(<header className="flex items-center justify-between mb-10"><Link href="/" className="font-bold text-xl">Portfolio</Link><nav className="flex gap-6"><Link className="nav-link" href="/">الرئيسية</Link><Link className="nav-link" href="/projects">الأعمال</Link><Link className="nav-link" href="/about">عنّي</Link><Link className="nav-link" href="/contact">تواصل</Link><Link className="nav-link" href="/studio">لوحة التحكم</Link></nav></header>)}

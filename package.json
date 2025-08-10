@@ -1,6 +1,6 @@
 {
   "name": "portfolio-complete",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -13,11 +13,11 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "clsx": "2.1.1",
-    "next-sanity": "8.6.6",
     "@sanity/client": "6.19.2",
     "@sanity/image-url": "1.0.2",
     "sanity": "3.57.4",
-    "@sanity/vision": "3.57.4"
+    "@sanity/vision": "3.57.4",
+    "next-sanity": "9.0.0"
   },
   "devDependencies": {
     "autoprefixer": "10.4.19",
@@ -25,6 +25,7 @@
     "eslint-config-next": "14.2.4",
     "postcss": "8.4.38",
     "tailwindcss": "3.4.7",
+    "@tailwindcss/typography": "0.5.15",
     "typescript": "5.4.5"
   }
 }

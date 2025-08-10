@@ -1,0 +1,5 @@
+import Image from 'next/image'
+import Lightbox from '@/components/Lightbox'
+import { getProjectBySlug } from '@/lib/queries'
+export const revalidate=60
+export default async function ProjectPage({params}:{params:{slug:string}}){const project=await getProjectBySlug(params.slug);if(!project)return <div className="py-20">لم يتم العثور على المشروع.</div>;return(<article className="space-y-8"><header className="space-y-2"><h1 className="text-3xl font-bold">{project.title}</h1><p className="text-neutral-600">{project.description}</p>{project.tags?.length?(<div className="flex flex-wrap gap-2">{project.tags.map((t:string)=>(<span key={t} className="tag">{t}</span>))}</div>):null}</header><div className="grid md:grid-cols-2 gap-6">{project.images?.map((img:any)=>(<Lightbox key={img._key} src={img.url} alt={project.title}><div className="relative aspect-[4/3] cursor-zoom-in"><Image src={img.url} alt={project.title} fill sizes="(min-width: 768px) 50vw, 100vw"/></div></Lightbox>))}</div></article>)}

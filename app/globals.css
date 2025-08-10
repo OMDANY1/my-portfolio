@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html,body{@apply bg-white text-neutral-900}
+.container{@apply max-w-6xl mx-auto px-4}
+.nav-link{@apply text-sm hover:underline}
+.card{@apply border rounded-2xl overflow-hidden bg-white}
+.btn{@apply inline-flex items-center gap-2 rounded-xl border px-4 py-2 text-sm hover:bg-neutral-50}
+.tag{@apply inline-block rounded-full border px-3 py-1 text-xs}
+.prose img{@apply rounded-lg}
